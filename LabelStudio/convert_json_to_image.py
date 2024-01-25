@@ -2,6 +2,20 @@
 Code from https://stackoverflow.com/a/74901690
 Convert the exported json from Label Studio to png mask with correct name. the JSON must be located at the same level as the images.
 Usage: python convert_json_to_image.py PATH_TO_JSON PATH_TO_OUTPUT_MASKS
+Example: python convert_json_to_image.py ../data/raw_data/project-48-at-2024-01-25-08-51-0e3eeda2.json ../data/masks
+with the following structure
+.
+├── data/
+│   ├── raw_data/
+│   │   ├── PAT_8_15_820.png
+│   │   ├── PAT_39_55_233.png
+│   │   └── project-48-at-2024-01-25-08-51-0e3eeda2.json
+│   └── masks
+└── LabelStudio/
+    ├── convert_json_to_image.py
+    ├── LabelStudio.pdf
+    └── merge_masks.py
+The folder "masks" will contain the created png version of the masks
 """
 
 from typing import List
